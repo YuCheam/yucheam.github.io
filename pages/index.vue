@@ -1,29 +1,6 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        YuResumeWebsite
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div>
+    <div id="typewriter">Hello my name is Kha-Yu Aimee Cheam</div>
   </div>
 </template>
 
@@ -34,42 +11,26 @@ export default Vue.extend({})
 </script>
 
 <style>
-.container {
+#typewriter {
+  font-size: 4vw;
+  overflow: hidden;
+  border-right: .1em solid orange;
+  white-space: nowrap;
   margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  letter-spacing: .1em;
+  animation:
+    typing 4s steps(45,end),
+    blink-caret .75s step-end 0s 10 forwards;
 }
 
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+/* Type writer effect */
+@keyframes typing {
+  from {width: 0}
+  to {width: 100%}
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+@keyframes blink-caret {
+  from, to {border-color: transparent}
+  50% {border-color: #ff9a8d;}
 }
 </style>
